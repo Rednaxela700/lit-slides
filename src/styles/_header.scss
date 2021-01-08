@@ -1,0 +1,10 @@
+.header {
+  @include rwd(tablet) {
+    @include minSize(100%, 84px);
+    padding: 24px 0;
+  }
+
+  &__wrapper {
+    @extend .base__section__wrapper;
+  }
+}

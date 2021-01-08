@@ -1,0 +1,26 @@
+@mixin flex($justify: normal, $align: normal, $col: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $col;
+}
+
+@mixin rwd($device) {
+  @if (map_has_key($breakpoints, $device)) {
+    @media (max-width: map_get($breakpoints, $device)) {
+      @content;
+    }
+  } @else {
+    @warn 'no value retrieved from `#{$breakpoint}`, available values are: #{map_keys($breakpoints)}.';
+  }
+}
+
+@mixin minSize($w: unset, $h: unset) {
+  min-width: $w;
+  min-height: $h;
+}
+
+@mixin maxSize($w: unset, $h: unset) {
+  max-width: $w;
+  max-height: $h;
+}

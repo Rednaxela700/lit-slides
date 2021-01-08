@@ -1,0 +1,45 @@
+.base__heading {
+  font-family: $fontPrimary;
+  font-style: normal;
+  font-weight: 300;
+}
+.base__heading--lg {
+  @extend .base__heading;
+  font-size: 40px;
+  line-height: 52px;
+}
+.base__heading--md {
+  @extend .base__heading;
+  font-size: 30px;
+  line-height: 30px;
+}
+.base__heading--sm {
+  @extend .base__heading;
+  font-size: 20px;
+  line-height: 24px;
+}
+.base__text--lg {
+  font-size: 20px;
+  line-height: 160%;
+}
+.base__text {
+  font-size: 15px;
+  line-height: 160%;
+}
+
+.base__section__wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.post {
+  @include maxSize(332px, 228px);
+  @include minSize(100%, 100%);
+  padding: 36px 27px;
+
+  &__heading {
+    @extend .base__heading--md;
+    text-align: center;
+    margin: 0 0 12px;
+  }
+}
